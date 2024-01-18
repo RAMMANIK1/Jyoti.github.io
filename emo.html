@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Here</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #87CEEB, #1E90FF); /* Sky blue gradient */
+        }
+
+        #boundary {
+            width: 80vw;
+            height: 50vh;
+            border: 2px solid #228B22; /* Forest green border */
+            position: relative;
+            margin: 10vh auto;
+            background: url('sun.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        #touchButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: #FFD700; /* Gold button background */
+            color: #8B4513; /* Saddle brown button text color */
+            font-size: 18px;
+            font-weight: bold;
+            border: 2px solid #8B4513;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="boundary">
+        <button id="touchButton" onclick="displaySorry()">Touch Here</button>
+    </div>
+
+    <script>
+        function displaySorry() {
+            for (let i = 1; i <= 5; i++) {
+                alert(`Sorry ${i}!`);
+            }
+        }
+    </script>
+</body>
+</html>
